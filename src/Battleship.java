@@ -1,14 +1,8 @@
 public class Battleship implements Ships{
 
-    private int length;
-    private int strength;
-    private boolean sunk;
-
-    public void main(){
-        this.length = setLength();
-        this.strength = setLength();
-        this.sunk = false;
-    }
+    private int length = 4;
+    private int strength = 4;
+    private boolean sunk = false;
 
     @Override
     public int getLength() {
@@ -18,12 +12,6 @@ public class Battleship implements Ships{
     @Override
     public boolean getStatus() {
         return this.sunk;
-    }
-
-    @Override
-    public int setLength() {
-        int length = 4;
-        return length;
     }
 
     @Override

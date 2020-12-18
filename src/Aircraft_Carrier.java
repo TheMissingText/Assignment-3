@@ -1,14 +1,8 @@
 public class Aircraft_Carrier implements Ships{
 
-    private int length;
-    private boolean sunk;
-    private int strength;
-
-    public void main(){
-        this.length = setLength();
-        this.strength = setLength();
-        this.sunk = false;
-    }
+    private int length = 5;
+    private boolean sunk = false;
+    private int strength = 5;
 
     @Override
     public int getLength() {
@@ -18,12 +12,6 @@ public class Aircraft_Carrier implements Ships{
     @Override
     public boolean getStatus() {
         return this.sunk;
-    }
-
-    @Override
-    public int setLength() {
-        int length = 5;
-        return length;
     }
 
     @Override

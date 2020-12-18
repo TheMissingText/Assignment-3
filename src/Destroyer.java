@@ -1,14 +1,9 @@
 public class Destroyer implements Ships{
 
-    private int length;
-    private int strength;
-    private boolean sunk;
+    private int length = 3;
+    private int strength = 3;
+    private boolean sunk = false;
 
-    public void main(){
-        this.length = setLength();
-        this.strength = setLength();
-        this.sunk = false;
-    }
     @Override
     public int getLength() {
         return this.length;
@@ -17,12 +12,6 @@ public class Destroyer implements Ships{
     @Override
     public boolean getStatus() {
         return this.sunk;
-    }
-
-    @Override
-    public int setLength() {
-        int length = 3;
-        return length;
     }
 
     @Override
