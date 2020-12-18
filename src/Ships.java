@@ -1,2 +1,7 @@
-public class Ships {
+public interface Ships {
+
+    public int getLength();
+    public boolean getStatus();
+    public int setLength();
+    public boolean checkStatus();
 }
