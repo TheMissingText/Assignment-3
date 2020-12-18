@@ -4,4 +4,6 @@ public interface Ships {
     public boolean getStatus();
     public int setLength();
     public boolean checkStatus();
+    public int getStrength();
+    public void takeStrength();
 }
