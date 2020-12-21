@@ -7,7 +7,11 @@ public class Locations {
         return this.hit;
     }
 
-    public void setOccupied(Object occupation){
+    public void setOccupied(Object occupation) {
         this.occupied = occupation;
-      }
+    }
+
+    public boolean checkOccupied(){
+        return this.occupied == null;
+    }
 }
