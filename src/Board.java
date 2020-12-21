@@ -90,4 +90,16 @@ public class Board {
         }
         return iterate;
     }
+
+    public void showBoard(){
+        System.out.println("|1|2|3|4|5|6|7|8|9|10");
+        for (int a = 1; a <= 10; a++){
+            String board_line = a + "|";
+            for (int b = 1; b <= 10; b++){
+                board_line += this.board[a][b].checkPointer();
+                board_line += "|";
+            }
+            System.out.println(board_line);
+        }
+    }
 }

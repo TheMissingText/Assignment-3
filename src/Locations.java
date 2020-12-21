@@ -22,4 +22,8 @@ public class Locations {
         }
         this.pointer = "M";
     }
+
+    public String checkPointer(){
+        return this.pointer;
+    }
 }
