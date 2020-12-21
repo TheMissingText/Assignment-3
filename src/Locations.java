@@ -2,6 +2,7 @@ public class Locations {
 
     private boolean hit = false;
     private Object occupied = null;
+    private String pointer = " ";
 
     public boolean beenHit(){
         return this.hit;
@@ -13,5 +14,12 @@ public class Locations {
 
     public boolean checkOccupied(){
         return this.occupied == null;
+    }
+
+    public void changePointer(){
+        if (checkOccupied()){
+            this.pointer = "H";
+        }
+        this.pointer = "M";
     }
 }
