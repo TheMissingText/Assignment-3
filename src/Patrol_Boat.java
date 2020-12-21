@@ -1,15 +1,9 @@
 public class Patrol_Boat implements Ships{
 
-    private int length;
-    private int strength;
-    private boolean sunk;
+    private int length = 2;
+    private int strength = 2;
+    private boolean sunk = false;
 
-    public void main(){
-        this.length = setLength();
-        this.strength = setLength();
-        this.sunk = false;
-
-    }
     @Override
     public int getLength() {
         return this.length;
@@ -18,12 +12,6 @@ public class Patrol_Boat implements Ships{
     @Override
     public boolean getStatus() {
         return this.sunk;
-    }
-
-    @Override
-    public int setLength() {
-        int length = 2;
-        return length;
     }
 
     @Override
