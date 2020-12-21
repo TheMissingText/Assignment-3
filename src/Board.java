@@ -19,7 +19,9 @@ public class Board {
     public void makeBoard() {
         for (int x = 1; x <= 10; x++){
             for (int y = 1; y<=10; y++){
-                this.board[x][y] = null;
+                Locations pointer = new Locations();
+                pointer.setOccupied(null);
+                this.board[x][y] = pointer;
             }
         }
         grabShips();
@@ -33,6 +35,7 @@ public class Board {
                 int orientation = this.random.nextInt(2) + 1;
                 int x = this.random.nextInt(10) + 1;
                 int y = this.random.nextInt(10) + 1;
+
                 List<Locations> iterate = prepShipLocations(item, orientation, x, y);
                 if (orientation == 1) {
                     if (!checkEmpty(iterate) && !checkOOB(x, y, item.getLength(), 0)){
@@ -56,16 +59,17 @@ public class Board {
 
     public boolean checkEmpty(List<Locations> iterate) {
         boolean occupied = false;
-        for (Locations item : iterate){
-            if (item != null){
-               occupied = true;
+        for (Locations item : iterate) {
+            occupied = item.checkOccupied();
+            if (occupied) {
+                break;
             }
         }
         return occupied;
     }
 
     public void assignSquare(int x, int y, int i, int c, Ships assignment){
-        this.board[x+i][y+c] = (Locations) assignment;
+        this.board[x+i][y+c].setOccupied(assignment);
     }
 
     public boolean checkOOB(int x, int y, int i, int c){
