@@ -102,4 +102,8 @@ public class Board {
             System.out.println(board_line);
         }
     }
+
+    public Locations[][] getBoard(){
+        return this.board;
+    }
 }

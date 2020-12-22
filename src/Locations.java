@@ -4,8 +4,12 @@ public class Locations {
     private Object occupied = null;
     private String pointer = " ";
 
-    public boolean beenHit(){
+    public boolean checkHit(){
         return this.hit;
+    }
+
+    public void beenHit(){
+        this.hit = true;
     }
 
     public void setOccupied(Object occupation) {
