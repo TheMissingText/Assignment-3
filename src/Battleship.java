@@ -15,6 +15,11 @@ public class Battleship implements Ships{
     }
 
     @Override
+    public String getName(){
+        return "BattleShip";
+    }
+
+    @Override
     public boolean checkStatus() {
         return (this.strength == 0);
     }
