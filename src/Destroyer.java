@@ -15,6 +15,11 @@ public class Destroyer implements Ships{
     }
 
     @Override
+    public String getName(){
+        return "Destroyer";
+    }
+
+    @Override
     public boolean checkStatus() {
         return (this.strength == 0);
     }

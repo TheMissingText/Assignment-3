@@ -15,6 +15,11 @@ public class Submarine implements Ships{
     }
 
     @Override
+    public String getName(){
+        return "Submarine";
+    }
+
+    @Override
     public boolean checkStatus() {
         return (this.strength == 0);
     }

@@ -15,14 +15,21 @@ public class Aircraft_Carrier implements Ships{
     }
 
     @Override
+    public String getName(){
+        return "Aircraft Carrier";
+    }
+
+    @Override
     public boolean checkStatus() {
         return (strength == 0);
     }
 
+    @Override
     public int getStrength(){
         return this.strength;
     }
 
+    @Override
     public void takeStrength(){
         this.strength -= 1;
     }

@@ -15,6 +15,11 @@ public class Patrol_Boat implements Ships{
     }
 
     @Override
+    public String getName(){
+        return "Patrol Boat";
+    }
+
+    @Override
     public boolean checkStatus() {
         return (this.strength == 0);
     }
