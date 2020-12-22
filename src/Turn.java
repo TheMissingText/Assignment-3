@@ -7,6 +7,12 @@ public class Turn {
     private int x = 0;
     private int y = 0;
 
+    public void main(Board board){
+        assignBoard(board);
+        getUserPos();
+
+    }
+
     public void assignBoard(Board board) {
         this.board = board;
     }
@@ -19,5 +25,7 @@ public class Turn {
     public boolean checkSpot() {
         return this.board.getBoard()[this.x][this.y].checkOccupied();
     }
+
+    public void handleShips
 }
 
